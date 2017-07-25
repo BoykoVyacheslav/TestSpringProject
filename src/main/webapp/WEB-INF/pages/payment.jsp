@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <title>model.Payment</title>
+    <title>model.Entities.Payment</title>
 </head>
 <body>
 <h2>Welcome, ${user_name}</h2><br/>

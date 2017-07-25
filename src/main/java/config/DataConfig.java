@@ -1,6 +1,9 @@
 package config;
 
-import model.UserDAO;
+import model.DAO.ClientDAO;
+import model.DAO.ServiceDAO;
+import model.DAO.UserDAO;
+
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -62,4 +65,9 @@ public class DataConfig {
         return UserDAO.getInstance();
     }
 
+    @Bean
+    public ClientDAO getClientDAO(){ return ClientDAO.getInstance();}
+
+    @Bean
+    public ServiceDAO getServiceDAO(){return ServiceDAO.getInstance();}
 }
