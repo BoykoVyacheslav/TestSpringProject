@@ -1,5 +1,6 @@
 package model.Entities;
 
+import org.hibernate.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -25,7 +26,7 @@ public class Service {
         this.price=price;
     }
 
-    public Service() {
+    protected Service() {
     }
 
     public String getService_name() {

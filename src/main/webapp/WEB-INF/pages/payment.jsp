@@ -1,10 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html lang="en">
 <head>
     <title>model.Entities.Payment</title>
 </head>
 <body>
-<h2>Welcome, ${user_name}</h2><br/>
+<h2>Manage your balance here</h2><br/>
 <label style="margin-left: 30px">Make a payment</label><br/>
 <p/>
 <div style="margin-left: 30px;line-height: 25px">

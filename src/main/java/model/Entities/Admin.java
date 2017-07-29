@@ -3,6 +3,7 @@ package model.Entities;
 import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "Admins")
 public class Admin extends User {
 

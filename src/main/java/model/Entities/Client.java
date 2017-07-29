@@ -6,6 +6,7 @@ import java.util.List;
 
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "Clients")
 public class Client extends User{
 
