@@ -75,6 +75,12 @@
             <version>5.1.39</version>
         </dependency>
 
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
 <!-- _________________________Hibernate_________________________________ -->
 
         <dependency>
