@@ -1,7 +1,8 @@
-package model.Entities;
+package model.entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+
 
 @Entity
 @Table(name = "Users")
@@ -9,24 +10,31 @@ import javax.validation.constraints.NotNull;
 public class User {
 
     @Id
-    @GeneratedValue
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    @NotNull
     @Column(name = "name")
     private String name;
 
-    @NotNull
+    @Column(name = "phone")
+    private String phone;
+
     @Column(name="email")
     private String email;
 
-    @NotNull
     @Column(name="password")
     private String password;
 
+//    @OneToMany(mappedBy = "user")
+//    private ArrayList<Order> orders;
 
-    public User(String name, String email, String password) {
+//    @OneToMany(mappedBy = "user")
+//    private ArrayList<Response> responses;
+
+
+    public User(String name,String phone, String email, String password) {
         this.name = name;
+        this.phone=phone;
         this.email = email;
         this.password = password;
     }
@@ -34,8 +42,16 @@ public class User {
     public User() {
     }
 
-    public int getId() {
+    public long getId() {
         return this.id;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getName() {
@@ -57,4 +73,11 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+//    public void makeOrder(Order order){
+//        this.orders.add(order);
+//    }
+//    public ArrayList<Order> getOrders(){
+//        return orders;
+//    }
 }
